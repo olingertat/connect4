@@ -3,6 +3,8 @@
 #define BOARD_HEIGHT 6
 #define BOARD_WIDTH 7
 #define WIN_LENGTH 4
+#define MAXIMIZING_PLAYER playerX
+#define MINIMIZING_PLAYER playerO
 
 
 typedef enum PlayerTeams {
@@ -12,6 +14,8 @@ typedef enum PlayerTeams {
 } PlayerTeam;
 
 PlayerTeam getOpposingTeam( PlayerTeam player );
+
+bool isMaximizingPlayer( PlayerTeam player );
 
 char getTeamCharRepresentation( PlayerTeam player );
 

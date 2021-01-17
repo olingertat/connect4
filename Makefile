@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++14 -Wall -MMD -g
 EXEC = connect4
-OBJECTS = main.o board.o humanPlayer.o controller.o textView.o playerTeam.o
+OBJECTS = main.o board.o humanPlayer.o minMaxPlayer.o controller.o textView.o playerTeam.o
 DEPENDS = ${OBJECTS:.o=.d}
 
 ${EXEC}: ${OBJECTS}

@@ -6,6 +6,10 @@ PlayerTeam getOpposingTeam( PlayerTeam player ) {
 	return noPlayer;
 }
 
+bool isMaximizingPlayer( PlayerTeam player ) {
+	return player == MAXIMIZING_PLAYER;
+}
+
 char getTeamCharRepresentation( PlayerTeam player ) {
 	if(player == playerX) return 'X';
 	if(player == playerO) return 'O';

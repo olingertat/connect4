@@ -4,12 +4,19 @@
 using namespace std;
 
 void TextView::updateView(const Board& theBoard) {
+	for(int i = 0; i < BOARD_WIDTH+2; ++i) cout << '*';
+	cout << '\n';
 	for(int row = BOARD_HEIGHT - 1; row >= 0; --row) {
+		cout << '*';
 		for(int col = 0; col < BOARD_WIDTH; ++col) {
 			cout << getTeamCharRepresentation(theBoard.at(col, row));
 		}
-		cout << '\n';
+		cout << "*\n";
 	}
+	for(int i = 0; i < BOARD_WIDTH+2; ++i) cout << '*';
+	cout << "\n ";
+	for(int i = 0; i < BOARD_WIDTH; ++i) cout << i;
+	cout << " \n";
 }
 
 void TextView::displayWinner(PlayerTeam winner) {
